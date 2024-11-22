@@ -1,0 +1,249 @@
+header {
+  background-color: #f2f2f2;
+  padding: 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  font-family: verdana;
+  padding: 15px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+img {
+  float: left;
+  width: 230px;
+  padding-left: 50px;
+  padding-right: 30px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: #033f64;
+  font-size: large;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #dddddd;
+}
+
+h2:first-of-type {
+  font-family: Verdana;
+  font-size: large;
+}
+
+/* heading */
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: verdana;
+  font-size: small;
+  padding-left: 5%;
+  padding-top: 20px;
+}
+
+label {
+  padding-bottom: 8px;
+}
+
+label.required::after {
+  content: "*"; /* Adds the '*' after the label text */
+  color: red; /* Makes the '*' red */
+}
+
+.form_align {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.eye-toggle {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+input.checkbox {
+  padding: 0;
+  width: auto;
+}
+
+h5 {
+  display: flex;
+  margin-top: 0px;
+  margin: 0;
+  font-family: verdana;
+  padding: 15px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+/* 2ND Section */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 100%;
+  margin: 20px auto;
+  color: #033f64;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 1px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h5 {
+  font-size: 15px;
+  padding-top: 4px;
+  padding-left: 3px;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h3 {
+  color: black;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+input {
+  margin-left: 0;
+}
+.form-group input[type="checkbox"] {
+  width: auto;
+}
+
+label.form-label1 {
+  color: black;
+  
+
+}
+
+.form-footer {
+  display: flex;
+  padding-top: 25px;
+}
+
+.form-footer button {
+  padding: 10px 20px;
+  background-color: #0a3844;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+.form-footer button:hover {
+  background-color: #555;
+}
+
+/* e-mail error massage */
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-control.error {
+  border-color: red;
+}
+
+.form-control.success {
+  border-color: green;
+}
+
+/* end this here */
+
+.select_option {
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+}
+
+footer {
+  list-style-type: none;
+  margin: 0;
+  font-family: verdana;
+  align-items: center;
+  color: white;
+  padding: 15px;
+  overflow: hidden;
+  background-color: #0b2430;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.eye-password {
+  position: relative;
+}
+
+/* phone and mobile number css */
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+.error {
+  border-color: red !important;
+}
+
+.success {
+  border-color: green !important;
+}
+
+.form-label {
+  margin-bottom: 0px;
+}
+
+.mb-20 {
+  margin-top: 20px;
+}
+
+input.form-control:focus, .form-select:focus {
+  box-shadow: none;
+}
+label.error{
+  color: red;
+  font-size: 13px;
+}

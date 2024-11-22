@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <a href="index.html"><img src="../Img/WS_Logo.png" alt="Logo" class="logo"
+            /></a>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div>
+      <h2> <strong>Agent Registration</strong></h2>
+    </div>
+  <form method="post" action="submit.html" id="register-form" novalidate="novalidate">
+    <!-- Account Details -->
+    <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="username" class="form-label, required">Username</label>
+              <input type="text" class="form-control" placeholder="Username" name="username">
+            </div>
+
+            <div class="col-md-4 eye-password">
+              <label class="form-label, required">Password</label>
+              <input type="password" class="form-control" id="password" maxlength="10" minlength="8" placeholder="Password" required  name="password">
+              <div class="eye-toggle">
+                <i class="fa fa-eye" id="toggle-password" required></i> 
+            </div>
+            </div>
+
+            <div class="col-md-4 eye-password">
+              <label class="form-label, required">Confirm Password</label>
+              <input type="password" class="form-control" id="cPassword" maxlength="10" minlength="8" placeholder="Confirm Password" required name="cPassword">
+              <div class="eye-toggle">
+                  <i class="fa fa-eye" id="toggle-cPassword" required></i> 
+              </div>
+            </div>
+          </div>
+          <h5>
+            <i>Please note username cannot be changed, once chosen</i>
+          </h5>
+         </div>
+      </section>
+
+    <section>
+      <div class="container">
+        <h3><strong>Company Details</strong> </h3>
+        <div class="form-field-area">
+            <div class="row">
+              <div class="col-md-3">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" placeholder="Company Name">
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="iata_status">IATA Status</label>
+                  <div class="flex">
+                    <label class="flex align-center">
+                      <input type="radio" name="iata_status" value="approved" class="checkbox"> Approved</label>
+                    <label class="flex align-center">
+                      <input type="radio" name="iata_status" value="non_approved" class="checkbox"> Non-Approved</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">IATA Number</label>
+                <input type="text" class="form-control" placeholder="IATA Number">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Company Reg. No</label>
+                <input type="text" class="form-control" placeholder="Company Reg. No">
+              </div>
+            </div>
+            <!-- second row start -->
+            <div class="row mb-20">
+              <div class="col-md-3">
+                <label class="form-label">Nature of Business</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option value="" >Select...</option>
+                  <option value="1">IT Firm</option>
+                  <option value="2">Sole proprietorship</option>
+                  <option value="3">Buyer and seller</option>
+                  <option value="4">Technological sector</option>
+                  <option value="5">Nonprofit organization</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label required">Country</label>
+                <select class="form-select" aria-label="Default select example" required>
+                  <option value="" select>select</option>
+                  <option value="1">USA</option>
+                  <option value="2">Algeria</option>
+                  <option value="3">China</option>
+                  <option value="3">Mexico</option>
+                  <option value="3">Belgium</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label, required">City</label>
+                <select class="form-select" aria-label="Default select example" required name="city">
+                  <option value="" select>select</option>
+                  <option value="1">Boston</option>
+                  <option value="2">Blida</option>
+                  <option value="3">Span</option>
+                  <option value="3">Ghent</option>
+                  <option value="3">Shanghai</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Pincode/Zipcode</label>
+                <input type="text" class="form-control" placeholder="Pincode/Zipcode">
+              </div>
+            </div>
+
+            <!-- third row start -->
+            <div class="row mb-20">
+              <div class="col-md-6">
+                <label class="form-label, required">Address</label>
+                <input type="text" class="form-control" placeholder="Address" required name="address">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Website</label>
+                <input type="url" class="form-control" placeholder="Website">
+              </div>
+              <div class="col-md-3">
+                <label for="formFile" class="form-label">Your Logo (300px x 300px)</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- customer information form start -->
+    <section>
+      <div class="container">
+        <h3><strong>Customer Information</strong> </h3>
+        <div class="form-field-area">
+            <div class="row">
+              <div class="col-md-3">
+                <label class="form-label, required">First Name</label>
+                <input type="text" class="form-control" placeholder="First name" required name="first name">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label, required">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" required name="last name">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Designation</label>
+                <input type="text" class="form-control" placeholder="Designation">
+              </div>
+              <div class="col-md-3">
+              <label class="form-label required" for="emailInput1">Email ID</label>
+              <input type="email" class="form-control" id="emailInput1" placeholder="Email Address" required name="email">
+              <div id="emailError1" class="error-message"></div>
+              </div>
+            </div>  
+
+            <!-- second row start -->
+            <div class="row mb-20">
+              <div class="col-md-3">
+                <label class="form-label required">Mobile Number</label>
+                <div class="code-mobile row">
+                  <div class="col-md-3">
+                    <input type="text" class="form-control mobile-code" placeholder="code" required name="code">
+                    <span class="error-message"></span>
+                  </div>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control mobile-number" placeholder="Mobile Number" required name="moble"> 
+                    <span class="error-message"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label required">Phone Number</label>
+                <div class="code-mobile row">
+                  <div class="col-md-3">
+                    <input type="text" class="form-control phone-code" placeholder="code" required name="code1">
+                    <span class="error-message"></span>
+                  </div>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control phone-number" placeholder="Phone Number" required name="phone number">
+                    <span class="error-message"></span>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-md-3">
+                <label class="form-label">Fax</label>
+                <div class="code-mobile row">
+                  <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="code">
+                  </div>
+                  <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="Fax Number">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label, required">Preferred Currency</label>
+                <select class="form-select" aria-label="Default select example" required name="Preferred Currency">
+                  <option value=""Select>Select</option>
+                   <option value="USD">USD - United States Dollar</option>
+                   <option value="GBP">GBP - British Pound</option>
+                   <option value="JPY">JPY - Japanese Yen</option>
+                   <option value="INR">INR - Indian Rupee</option>
+                   <option value="AUD">AUD - Australian Dollar</option>
+                   <option value="CAD">CAD - Canadian Dollar</option>
+                   <option value="CHF">CHF - Swiss Franc</option>
+                   <option value="CNY">CNY - Chinese Yuan</option>
+                   <option value="MXN">MXN - Mexican Peso</option>
+                   <option value="BRL">BRL - Brazilian Real</option>
+                   <option value="ZAR">ZAR - South African Rand</option>
+                   <option value="SGD">SGD - Singapore Dollar</option>
+                   <option value="NZD">NZD - New Zealand Dollar</option>
+                   <option value="RUB">RUB - Russian Ruble</option>
+                   <option value="KRW">KRW - South Korean Won</option>
+                   <option value="HKD">HKD - Hong Kong Dollar</option>
+                   <option value="EUR">EUR - Euro</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- third row start -->
+            <div class="row mb-20">
+              <div class="col-md-3">
+                <label class="form-label, required">Time Zone</label>
+                <select class="form-select" aria-label="Default select example required" required name="time zone">
+                  <option value=""select>Select</option>
+                  <option data-time-zone-id="2" data-gmt-adjustment="GMT-11:00" data-use-daylight="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                  <option data-time-zone-id="3" data-gmt-adjustment="GMT-10:00" data-use-daylight="0" value="-10">(GMT-10:00) Hawaii</option>
+                  <option data-time-zone-id="4" data-gmt-adjustment="GMT-09:00" data-use-daylight="1" value="-9">(GMT-09:00) Alaska</option>
+                  <option data-time-zone-id="5" data-gmt-adjustment="GMT-08:00" data-use-daylight="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                  <option data-time-zone-id="6" data-gmt-adjustment="GMT-08:00" data-use-daylight="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                  <option data-time-zone-id="7" data-gmt-adjustment="GMT-07:00" data-use-daylight="0" value="-7">(GMT-07:00) Arizona</option>
+                  <option data-time-zone-id="8" data-gmt-adjustment="GMT-07:00" data-use-daylight="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                  <option data-time-zone-id="9" data-gmt-adjustment="GMT-07:00" data-use-daylight="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                  <option data-time-zone-id="10" data-gmt-adjustment="GMT-06:00" data-use-daylight="0" value="-6">(GMT-06:00) Central America</option>
+                  <option data-time-zone-id="11" data-gmt-adjustment="GMT-06:00" data-use-daylight="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                  <option data-time-zone-id="12" data-gmt-adjustment="GMT-06:00" data-use-daylight="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                  <option data-time-zone-id="13" data-gmt-adjustment="GMT-06:00" data-use-daylight="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                  <option data-time-zone-id="14" data-gmt-adjustment="GMT-05:00" data-use-daylight="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                  <option data-time-zone-id="15" data-gmt-adjustment="GMT-05:00" data-use-daylight="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                  <option data-time-zone-id="16" data-gmt-adjustment="GMT-05:00" data-use-daylight="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                  <option data-time-zone-id="17" data-gmt-adjustment="GMT-04:00" data-use-daylight="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                  <option data-time-zone-id="18" data-gmt-adjustment="GMT-04:00" data-use-daylight="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                  <option data-time-zone-id="19" data-gmt-adjustment="GMT-04:00" data-use-daylight="0" value="-4">(GMT-04:00) Manaus</option>
+                  <option data-time-zone-id="20" data-gmt-adjustment="GMT-04:00" data-use-daylight="1" value="-4">(GMT-04:00) Santiago</option>
+                  <option data-time-zone-id="21" data-gmt-adjustment="GMT-03:30" data-use-daylight="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                  <option data-time-zone-id="22" data-gmt-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Brasilia</option>
+                  <option data-time-zone-id="23" data-gmt-adjustment="GMT-03:00" data-use-daylight="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                  <option data-time-zone-id="24" data-gmt-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Greenland</option>
+                  <option data-time-zone-id="25" data-gmt-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Montevideo</option>
+                  <option data-time-zone-id="26" data-gmt-adjustment="GMT-02:00" data-use-daylight="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                  <option data-time-zone-id="27" data-gmt-adjustment="GMT-01:00" data-use-daylight="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                  <option data-time-zone-id="28" data-gmt-adjustment="GMT-01:00" data-use-daylight="1" value="-1">(GMT-01:00) Azores</option>
+                  <option data-time-zone-id="29" data-gmt-adjustment="GMT+00:00" data-use-daylight="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                  <option data-time-zone-id="30" data-gmt-adjustment="GMT+00:00" data-use-daylight="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                  <option data-time-zone-id="31" data-gmt-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                  <option data-time-zone-id="32" data-gmt-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                  <option data-time-zone-id="33" data-gmt-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                  <option data-time-zone-id="34" data-gmt-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                  <option data-time-zone-id="35" data-gmt-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) West Central Africa</option>
+                  <option data-time-zone-id="36" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Amman</option>
+                  <option data-time-zone-id="37" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                  <option data-time-zone-id="38" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Beirut</option>
+                  <option data-time-zone-id="39" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Cairo</option>
+                  <option data-time-zone-id="40" data-gmt-adjustment="GMT+02:00" data-use-daylight="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                  <option data-time-zone-id="41" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                  <option data-time-zone-id="42" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Jerusalem</option>
+                  <option data-time-zone-id="43" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Minsk</option>
+                  <option data-time-zone-id="44" data-gmt-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Windhoek</option>
+                  <option data-time-zone-id="45" data-gmt-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                  <option data-time-zone-id="46" data-gmt-adjustment="GMT+03:00" data-use-daylight="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                  <option data-time-zone-id="47" data-gmt-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Nairobi</option>
+                  <option data-time-zone-id="48" data-gmt-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Tbilisi</option>
+                  <option data-time-zone-id="49" data-gmt-adjustment="GMT+03:30" data-use-daylight="1" value="3.5">(GMT+03:30) Tehran</option>
+                  <option data-time-zone-id="50" data-gmt-adjustment="GMT+04:00" data-use-daylight="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                  <option data-time-zone-id="51" data-gmt-adjustment="GMT+04:00" data-use-daylight="1" value="4">(GMT+04:00) Baku</option>
+                  <option data-time-zone-id="52" data-gmt-adjustment="GMT+04:00" data-use-daylight="1" value="4">(GMT+04:00) Yerevan</option>
+                  <option data-time-zone-id="1" data-gmt-adjustment="GMT-12:00" data-use-daylight="0" value="-12">(GMT-12:00) International Date Line West</option>
+                </select>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- finance Contact start -->
+    <section>
+      <div class="container">
+        <h3><strong>Finance Contact</strong></h3>
+        <div class="form-field-area">
+            <div class="row">
+              <div class="col-md-3">
+                <label class="form-label1">Accountant Details</label>
+                <!-- <input type="email" class="form-control" placeholder=""> -->
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"> Name</label>
+                <input type="text" class="form-control" placeholder="Name" name="name">
+              </div>
+
+            <div class="col-md-3">
+            <label class="form-label required" for="emailInput2">Email ID</label>
+            <input type="email" class="form-control" id="emailInput2" placeholder="Email Address" required name="email1"> 
+            <div id="emailError2" class="error-message"></div>
+            </div>
+
+              <div class="col-md-3">
+                <label class="form-label">Contact number</label>
+                <input type="text" class="form-control" placeholder="Contact number" name="contact number">
+              </div>
+            </div>
+
+            <!-- second row start -->
+            <div class="row">
+              <div class="col-md-3">
+                <label class="form-label1">Reservation/Operation Details</label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="email" class="form-control" placeholder="Email Address" required name="email">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="text" class="form-control" placeholder="Contact number">
+              </div>
+            </div>
+
+            <!-- third row start -->
+            <div class="row">
+              <div class="col-md-3">
+                <label class="form-label1">Management Details</label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="email" class="form-control" placeholder="Email Address" required name="email1">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <input type="text" class="form-control" placeholder="Contact Number">
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Terms and Conditions -->
+       <section>
+      <div class="container">
+        <label><input type="checkbox" id="terms">&nbsp; I Agree to the Terms & Conditions. <a href="#">Terms & Conditions.</a>*</label>
+
+        <!-- Submit and Reset Buttons -->
+        <div class="form-footer">
+          <a href="submit.html" > <button class="btn btn-primary" type="submit">Submit</button> 
+            </a>&nbsp;
+            <a href="#"> <button type="reset">Reset</button></a>
+        </div>
+      </div>
+    </section>
+  </form>
+    <div>
+      <!-- last Footer section -->
+      <footer class="center-text">
+        <copyright> <small>&copy;2024 Westay Ltd.All rights reserved.</small></copyright>
+      </footer>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+  <script src="validation.js"></script>
+
+<script>
+
+// eye-tiggle-button
+// eye button
+$("#toggle-password").click(function () {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $("#password");
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+$("#toggle-cPassword").click(function () {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $("#cPassword");
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
+</script>
+  </html>
